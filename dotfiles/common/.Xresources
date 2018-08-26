@@ -1,0 +1,20 @@
+xterm*font: *-fixed-*-*-*-18-*
+xterm*VT100.Translations: #override\
+    Shift <Key>Insert: insert-selection(SELECT)\n\
+    Ctrl <Key>Insert: copy-selection(SELECT)\n
+xterm*selectToClipboard:true
+xterm*metaSendsEscape:true
+xterm*eightBitInput:false
+xterm*transparent:true
+URxvt*font: *-fixed-medium-*-*-18-*
+URxvt*VT100.Translations: #override\
+    Shift <Key>Insert: insert-selection(SELECT)\n\
+    Ctrl <Key>Insert: copy-selection(SELECT)\n
+URxvt*selectToClipboard:true
+URxvt*metaSendsEscape:true
+URxvt*eightBitInput:false
+URxvt*transparent:true
+URxvt*shading:60
+URxvt*scrollBar:false
+URxvt.perl-ext-common: others,fork-here
+URxvt.keysym.Mod4-Return: perl:fork-here:fork-at-cwd

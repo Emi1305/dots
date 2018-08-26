@@ -1,7 +1,7 @@
-.vimrc:home
-.bashrc:home
-.profile:home
-.inputrc:home
-.Xresources:home
-.config/i3:home
-.config/ranger:home
+.vimrc
+.bashrc
+.profile
+.inputrc
+.Xresources
+.config/i3
+.config/ranger
