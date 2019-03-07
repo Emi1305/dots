@@ -175,3 +175,9 @@ bar {
 
 exec "setxkbmap -layout us,de"
 exec "setxkbmap -option 'grp:alt_shift_toggle'"
+
+
+# Burp floatings
+for_window [title="^Intruder attack \d+"] floating enable
+for_window [id=0x1a1d740] floating enable
+for_window [id=0x1a058be] floating enable

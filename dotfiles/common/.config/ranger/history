@@ -1,0 +1,50 @@
+shell mkdir pwnable.kr
+search pwn
+mkdir flag
+open_with 7za
+search mosdef
+search exploits
+search remo
+search exploi
+search web
+search coldfu
+
+open_w
+open_with firefox --no-remote
+search mozilla
+search moz
+search pdf
+cd ~
+search mozi
+set colorscheme solarized
+set colorscheme snow
+set colorscheme jungle
+set colorscheme default
+search .conf
+search rang
+open_with nvidia-bug-report.sh
+open_with nvim
+open_with file
+search .confi
+shell nvim @
+search .profi
+search nvim
+search canva
+search home
+open_with 
+search config
+search ur
+search rx
+search et
+search urx
+search rxv
+search wee
+search down
+search iso
+search .config
+search i3
+open_with firefox
+delete
+open_with vim
+search opt
+search troja

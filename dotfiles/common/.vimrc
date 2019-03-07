@@ -53,3 +53,6 @@ set shiftwidth=4
 set expandtab
 set autoindent
 
+nnoremap th :tabprevious<CR>
+nnoremap tl :tabnext<CR>
+nnoremap tn :tabnew<CR>

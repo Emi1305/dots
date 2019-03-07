@@ -20,4 +20,3 @@ export RANGER_LOAD_DEFAULT_RC
 
 PATH=$HOME/.local/bin:$PATH
 export PATH
-while true; do feh --bg-max --randomize ~/Pictures/*; sleep 60; done & disown;
