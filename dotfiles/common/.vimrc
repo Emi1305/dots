@@ -18,6 +18,8 @@ Plugin 'ternjs/tern_for_vim'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'posva/vim-vue'
 Plugin 'JamshedVesuna/vim-markdown-preview'
+Plugin 'patstockwell/vim-monokai-tasty'
+Bundle 'Rykka/riv.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -44,6 +46,10 @@ au BufNewFile,BufRead *.py
 
 let python_highlight_all=1
 let vim_markdown_preview_github=1
+let vim_markdown_preview_hotkey='<C-.>'
+let vim_markdown_preview_browser='Firefox'
+let vim_markdown_preview_toggle=3
+let vim_markdown_preview_temp_file=1
 syntax on
 set backspace=2 " make backspace work like most other programs
 
@@ -56,3 +62,8 @@ set autoindent
 nnoremap th :tabprevious<CR>
 nnoremap tl :tabnext<CR>
 nnoremap tn :tabnew<CR>
+
+autocmd VimEnter * NERDTree
+autocmd BufWinEnter * NERDTreeMirror
+autocmd VimEnter * 2wincmd w
+

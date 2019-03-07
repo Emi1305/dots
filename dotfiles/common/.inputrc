@@ -1,5 +1,2 @@
 set completion-ignore-case On
-set meta-flag On
-set convert-meta Off
-set output-meta On
-set bell-style none
+set bell-style visual
