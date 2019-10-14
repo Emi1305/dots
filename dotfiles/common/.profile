@@ -12,8 +12,8 @@
 TERMINAL=urxvt
 export TERMINAL
 
-PYTHONPATH="${PYTHONPATH}:/opt/Pwnpy"
-export PYTHONPATH
+#PYTHONPATH="${PYTHONPATH}:/opt/Pwnpy"
+#export PYTHONPATH
 
 VISUAL=nvim;
 export VISUAL;
@@ -21,9 +21,9 @@ export VISUAL;
 EDITOR=nvim;
 export EDITOR;
 
-source ~/2_monitors.sh
+#source ~/2_monitors.sh
 
-feh --bg-max ~/Pictures/Wallpapers/wallhaven-525306.png
+feh --bg-max ~/Downloads/TV\ is\ replaceable.jpg
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
@@ -40,5 +40,5 @@ fi
 
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
+    PATH="$HOME/.gem/ruby/2.6.0/bin:$HOME/.local/bin:$PATH"
 fi

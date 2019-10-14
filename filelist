@@ -6,3 +6,5 @@
 .config/i3
 .config/ranger
 .config/nvim
+.config/RadareOrg
+.config/i3status

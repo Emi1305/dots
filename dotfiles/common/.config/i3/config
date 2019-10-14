@@ -17,7 +17,8 @@ set $mod Mod4
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:DejaVu Sans Mono 10
+#font pango:DejaVu Sans Mono 10
+font pango:Luxi Mono 11, Inconsolata Nerd Font Mono 12
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -170,7 +171,10 @@ bindsym XF86AudioMute exec "amixer -c 0 sset Master toggle; amixer -c 0 sset Sur
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
+    colors {
+        background #112233
+    }
+    status_command "i3status -c ~/.config/i3status/i3status.conf"
 }
 
 exec "setxkbmap -layout us,en"
@@ -179,12 +183,12 @@ exec "setxkbmap -option 'grp:alt_shift_toggle'"
 
 
 mode "logout" {
-    bindsym l exec "i3lock -t -i ~/Pictures/Wallpapers/wallhaven-525306.png" mode "default"
+    bindsym l exec "i3lock -t -i $(ls -d ~/.wallpapers/* | shuf | head -n 1)" mode "default"
     bindsym e exec "i3-msg exit"
-    bindsym r exec "i3-msg restart"
-    bindsym R exec "shutdown -r now"
+    bindsym r exec "shutdown -r now"
     bindsym s exec "shutdown -h now"
-    bindsym T exec "i3-msg restart"
+    bindsym h exec "systemctl hybrid-sleep" mode "default"
+    bindsym t exec "i3-msg restart"
     bindsym Shift+u "i3-msg restart"
     bindsym Escape mode "default"
     bindsym Return mode "default"
@@ -203,6 +207,7 @@ bindsym $mod+F3 exec vmware
 bindsym $mod+F4 exec BurpSuitePro
 bindsym $mod+F5 exec "i3-sensible-terminal -fg green -bg black -e ranger"
 bindsym $mod+F6 exec pwsafe
+bindsym $mod+F7 exec intellij-idea-ultimate-edition
 
 
 bindsym Print exec flameshot gui
@@ -221,7 +226,7 @@ bindsym $mod+Shift+Ctrl+less move container to output left
 for_window [title="^Intruder attack \d+"] floating enable
 
 # Firefox
-for_window [class="Firefox"] move container to workspace $ws3
+for_window [class="(?i)Firefox"] move container to workspace $ws3
 
 # Thunderbird
 for_window [class="Thunderbird"] move container to workspace $ws1
@@ -229,12 +234,15 @@ for_window [class="Thunderbird"] move container to workspace $ws1
 # pwsafe
 for_window [class="(?i)pwsafe"] floating enable
 
+# intellij
+for_window [class="(?i)intellij"] move container to workspace $ws4
+
 # Workspace locations
-set $left "eDP-1-1"
-set $right "HDMI-1-1"
-workspace $ws1 output $left
-workspace $ws3 output $right
-workspace $ws5 output $right
-workspace $ws10 output $left
+#set $left "eDP-1-1"
+#set $right "HDMI-1-1"
+#workspace $ws1 output $left
+#workspace $ws3 output $right
+#workspace $ws5 output $right
+#workspace $ws10 output $left
 
 

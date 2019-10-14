@@ -7,7 +7,8 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'artur-shaik/vim-javacomplete2'
+"Plugin 'artur-shaik/vim-javacomplete2'
+Plugin 'davidhalter/jedi-vim'
 Plugin 'vim-scripts/indentpython.vim'
 Bundle 'Valloric/YouCompleteMe'
 Plugin 'vim-syntastic/syntastic'
@@ -19,7 +20,7 @@ Plugin 'maksimr/vim-jsbeautify'
 Plugin 'posva/vim-vue'
 Plugin 'JamshedVesuna/vim-markdown-preview'
 Plugin 'patstockwell/vim-monokai-tasty'
-Bundle 'Rykka/riv.vim'
+"Bundle 'Rykka/riv.vim'
 
 call vundle#end()            " required
 filetype plugin indent on    " required

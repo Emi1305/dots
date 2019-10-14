@@ -30,8 +30,12 @@ xterm*selectToClipboard:true
 xterm*metaSendsEscape:true
 xterm*eightBitInput:false
 xterm*transparent:true
-URxvt*font: *-fixed-*-*-*-18-*
+!URxvt*font: *-fixed-*-*-*-17-*
 !URxvt*font: -misc-fixed-medium-r-normal--18-120-100-100-c-90-iso10646-1
+!URxvt*font:  xft:Luxi Mono:size=11:
+!URxvt*font:  xft:FontAwesome Mono:size=11:
+URxvt*font: xft:Luxi Mono:size=12,xft:Inconsolata Nerd Font Mono:size=14
+!URxvt*letterSpace: -3
 URxvt*VT100.Translations: #override\
     Shift <Key>Insert: insert-selection(SELECT)\n\
     Ctrl <Key>Insert: copy-selection(SELECT)\n
@@ -51,3 +55,4 @@ URxvt.keysym.M-u: perl:matcher:select
 URxvt.keysym.M-Escape: perl:keyboard-select:activate
 URxvt.keysym.M-slash: perl:keyboard-select:search
 URxvt.keyboard-select.clipboard: true
+URxvt*color12: #bb00bb
